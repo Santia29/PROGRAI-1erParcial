@@ -23,15 +23,6 @@ def calcular_promedio_matriz(matriz):
             contador += 1
     return suma // contador
 
-# def calcular_porcentaje_de_votos(matriz):
-#     suma_total = 0
-#     for fila in matriz:
-#         suma_total = fila[1] + fila[2] + fila[3]
-#         for porcentaje in suma_total:
-#             porcentaje = suma_total / 100
-
-#     return porcentaje
-
 #1 Carga de votos
 
 def cargar_votos()-> list:
@@ -72,8 +63,6 @@ def cargar_votos()-> list:
         nota_promiedo = calcular_promedio_matriz(votos_de_listas)##
         votos_de_listas[fil][I_PORCENTAJE_VOTO] = float(nota_promiedo)
         
-    # for i in range(len(votos_de_listas)):
-    #     print(f"Nro de lista:{votos_de_listas[i][I_LISTA]}\n CANTIDAD DE VOTOS TURNO MAÑANA: {votos_de_listas[i][VOTO_MAÑANA]}\n CANTIDAD VOTOS TURNO TARDE: {votos_de_listas[i][VOTO_TARDE]}\n CANTIDAD VOTOS TURNO NOCHE: {votos_de_listas[i][VOTO_NOCHE]}\n PORCENTAJE DE VOTOS: {votos_de_listas[i][I_PORCENTAJE_VOTO]}%\n")
     return votos_de_listas
 
 cargar_votos_elecciones = cargar_votos()
@@ -106,8 +95,7 @@ def ordenar_de_forma_ascendente(matriz):
 
 ordenar_de_forma_ascendente(cargar_votos_elecciones)
 
-
-#4Encontrar y mostrar a las listas que tengan menos del 5% de todos los votos:
+#4
 
 def mostrar_lista_con_menos_porcentaje_votos(matriz):
     I_LISTA = 0
@@ -131,7 +119,6 @@ def mostrar_lista_con_menos_porcentaje_votos(matriz):
 mostrar_listas_menos_votadas = mostrar_lista_con_menos_porcentaje_votos(cargar_votos_elecciones)
 
 #5 
-
 def mostrar_turno_con_mas_votos(matriz):
     I_VOTO_MAÑANA = 1
     I_VOTO_TARDE = 2 
