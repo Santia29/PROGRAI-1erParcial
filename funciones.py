@@ -8,7 +8,6 @@ def inicializar_matriz(cantidad_filas:int,cantidad_columnas:int,valor_inicial:an
 
 def mostrar_matriz(matriz:list) -> None:
     for fil in range(len(matriz)):
-        #for col in range(len(matriz[0]))
         for col in range(len(matriz[fil])):
             print(matriz[fil][col],end=" ")
         print("")
